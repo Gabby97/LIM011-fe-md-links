@@ -37,12 +37,6 @@ const mdLinksFunction = (path, options, options2) => {
     return finalResul;
 };
 
-/* mdLinksFunction('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md', {validate: false}).then((res) => {
-    console.log(res);
-    
-}) */
-
-
 
 module.exports = {
     mdLinksFunction,
