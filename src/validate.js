@@ -36,10 +36,10 @@ const linksValidate = (route) => {
    return `Total:${whole} Unique:${singleLink}`;
  };
 
-  linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/readmeTest2.md').then((res) => {
+/*   linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/readmeTest2.md').then((res) => {
       console.log(stats(res));
     });
-  
+   */
 
   const statsBroken = (arrObj) => {
     const allLinks = arrObj.map((element) => element.href);
