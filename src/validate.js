@@ -25,9 +25,9 @@ const linksValidate = (route) => {
     return Promise.all(arrPromise);
     };
     //console.log(linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md'));
-    Promise.all(linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md'))
+    /* Promise.all(linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md'))
     .then((res) => console.log(res));
-
+ */
 
  const stats = (arrObj) => {
    const allLinks = arrObj.map((element) => element.href);
@@ -36,19 +36,20 @@ const linksValidate = (route) => {
    return `Total:${whole} Unique:${singleLink}`;
  };
 
- /*  linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md').then((res) => {
-      console.log(stats(res));
-    }); */
+  
 
   const statsBroken = (arrObj) => {
     const allLinks = arrObj.map((element) => element.href);
     const whole = allLinks.length;
-    const linksBroken = arrObj.filter((element) => element.statusText === 'fail');    
+    const linksBroken = arrObj.filter((element) => element.statusText === 'fail').length;    
     const singleLink = [...new Set(allLinks)].length;
     
     return `Total:${whole} Unique:${singleLink} Broken:${linksBroken}`;
   };
-
+  /*  linksValidate('/home/gabby/Escritorio/MD-liks/LIM011-fe-md-links/README.md').then((res) => {
+      console.log(statsBroken(res));
+    });
+ */
     
 
     module.exports = {
