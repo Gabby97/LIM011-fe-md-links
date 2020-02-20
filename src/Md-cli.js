@@ -26,6 +26,11 @@ const mdLinksFunction = (path, options, options2) => {
             const result = validateFunction.stats(res);
             return result;
         });
+    } else{
+        finalResul = mdLinksFn.mdLinks(path, {validate: false})
+        .then((res) => {
+            return res;
+        });
     }
     return finalResul;
 };
